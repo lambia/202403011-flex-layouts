@@ -1,3 +1,4 @@
+/************* COMMON STYLE **************/
 * {
     box-sizing: border-box;
     padding: 0;
@@ -9,4 +10,58 @@ body {
     background: #222;
     color: white;
     font-family: sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.space-bottom {
+    margin-bottom: 1rem;
+}
+
+/************* HEADER **************/
+header {
+    background-color: gold;
+    height: 5rem;
+}
+
+/************* SEZIONE DOPPIA COLONNA **************/
+nav {
+    background-color: violet;
+    width: calc(30% - 0.5rem);
+    min-height: 10rem;
+}
+
+main {
+    background-color: purple;
+    width: calc(70% - 0.5rem);
+    min-height: 20rem;
+}
+
+/************* SEZIONE TRIPLA COLONNA **************/
+.big-column {
+    background-color: violet;
+    min-height: 20rem;
+    /* SOLUZIONE A - CONSIGLIATA */
+    width: calc(50% - 2rem);
+    /* SOLUZIONE B - PUO' DIVENTARE SCOMODA */
+    width: 50%;
+    margin: 0 1rem;
+    /* SOLUZIONE C - LA VEDREMO DOMANI ;) */
+}
+
+.small-column {
+    background-color: purple;
+    min-height: 10rem;
+    width: 25%;
+}
+
+/************* FOOTER **************/
+footer {
+    background-color: lightblue;
+    height: 5rem;
 }
