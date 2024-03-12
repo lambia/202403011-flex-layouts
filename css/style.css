@@ -6,62 +6,103 @@
 }
 
 body {
-    padding: 1rem;
-    background: #222;
-    color: white;
     font-family: sans-serif;
 }
 
-.flex-container {
+.columns {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
 }
 
-.space-bottom {
-    margin-bottom: 1rem;
+.boxed {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.debug .nav-column-small,
+.debug .nav-column-big,
+.debug .jumbo-content,
+.debug main>section .columns>div {
+    border: dashed 2px black;
+}
+
+.debug footer,
+.debug .jumbo-content,
+.debug main>section .columns>div {
+    min-height: 10rem;
 }
 
 /************* HEADER **************/
 header {
-    background-color: gold;
-    height: 5rem;
+    background-color: lightblue;
 }
 
-/************* SEZIONE DOPPIA COLONNA **************/
-nav {
+header>nav {
+    padding: 1rem 0;
+}
+
+.nav-column {
+    background-color: orange;
+    padding: 1rem;
+}
+
+.nav-column-small {
+    width: 20%;
+}
+
+.nav-column-big {
+    width: 60%;
+}
+
+#jumbo {
+    background-color: darkblue;
+    color: white;
+    padding: 2rem;
+}
+
+.jumbo-content {
     background-color: violet;
-    width: calc(30% - 0.5rem);
-    min-height: 10rem;
-}
-
-main {
-    background-color: purple;
-    width: calc(70% - 0.5rem);
-    min-height: 20rem;
-}
-
-/************* SEZIONE TRIPLA COLONNA **************/
-.big-column {
-    background-color: violet;
-    min-height: 20rem;
-    /* SOLUZIONE A - CONSIGLIATA */
-    width: calc(50% - 2rem);
-    /* SOLUZIONE B - PUO' DIVENTARE SCOMODA */
     width: 50%;
-    margin: 0 1rem;
-    /* SOLUZIONE C - LA VEDREMO DOMANI ;) */
+    padding: 1rem;
+    margin: 0 auto;
 }
 
-.small-column {
-    background-color: purple;
-    min-height: 10rem;
-    width: 25%;
+/************* MAIN **************/
+section.dark {
+    background-color: lightgray;
+}
+
+section.light {
+    background-color: white;
+}
+
+main>section .columns {
+    padding: 1rem 0;
+}
+
+main>section .columns>div {
+    padding: 1rem;
+}
+
+.column-one {
+    width: 100%;
+    background: green;
+}
+
+.column-big {
+    width: 60%;
+    background-color: dodgerblue;
+}
+
+.column-small {
+    width: 40%;
+    background-color: pink;
 }
 
 /************* FOOTER **************/
 footer {
-    background-color: lightblue;
-    height: 5rem;
+    background-color: #222;
+    color: white;
 }
