@@ -9,6 +9,23 @@ body {
     font-family: sans-serif;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    background-color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 1.2rem;
+}
+
+.btn-dark {
+    background-color: black;
+    color: white;
+}
+
 .columns {
     display: flex;
     flex-direction: row;
@@ -21,22 +38,47 @@ body {
     max-width: 1200px;
 }
 
-.debug .nav-column-small,
-.debug .nav-column-big,
-.debug .jumbo-content,
-.debug main>section .columns>div {
+.debug .footer-left,
+.debug .footer-right,
+.debug .footer-right-child,
+.debug .footer-bottom a {
     border: dashed 2px black;
 }
 
 .debug footer,
-.debug .jumbo-content,
-.debug main>section .columns>div {
+.debug .footer-left,
+.debug .footer-right,
+.debug .footer-right-child {
     min-height: 10rem;
+}
+
+.align-items-start {
+    align-items: flex-start;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-end {
+    align-items: flex-end;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
 }
 
 /************* HEADER **************/
 header {
-    background-color: lightblue;
+    background-color: #255ee9;
 }
 
 header>nav {
@@ -44,7 +86,6 @@ header>nav {
 }
 
 .nav-column {
-    background-color: orange;
     padding: 1rem;
 }
 
@@ -54,19 +95,61 @@ header>nav {
 
 .nav-column-big {
     width: 60%;
+    text-align: center;
+}
+
+.nav-column-big a {
+    margin: 0 0.5rem;
+    color: white;
 }
 
 #jumbo {
-    background-color: darkblue;
+    background-color: #255ee9;
+    background-image: url("../img/jumbo.png");
+    background-size: cover;
+    background-position: top;
     color: white;
     padding: 2rem;
 }
 
 .jumbo-content {
-    background-color: violet;
     width: 50%;
     padding: 1rem;
     margin: 0 auto;
+    text-align: center;
+}
+
+.jumbo-content p {
+    margin: 0.75rem 0;
+}
+
+.jumbo-content .jumbo-cta {
+    margin: 2rem 0;
+    font-size: 1.3rem;
+}
+
+.jumbo-cta .btn {
+    margin: 0 1rem;
+}
+
+h1 {
+    margin: 1rem 0;
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+h3 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+p {
+    font-size: 1.3rem;
+    line-height: 2rem;
 }
 
 /************* MAIN **************/
@@ -93,16 +176,47 @@ main>section .columns>div {
 
 .column-big {
     width: 60%;
-    background-color: dodgerblue;
 }
 
 .column-small {
     width: 40%;
-    background-color: pink;
+}
+
+.w-100 {
+    width: 100%;
 }
 
 /************* FOOTER **************/
 footer {
     background-color: #222;
     color: white;
+    padding: 1rem 0;
+}
+
+.footer-left {
+    width: 30%;
+    background-color: orange;
+    padding: 1rem;
+}
+
+.footer-right {
+    width: 70%;
+    background-color: greenyellow;
+}
+
+.footer-right-child {
+    width: 25%;
+    padding: 1rem;
+}
+
+.footer-bottom {
+    margin-top: 1rem;
+    border-top: solid 1px #7289da;
+    padding-top: 1rem;
+    justify-content: space-between;
+}
+
+.footer-bottom a {
+    background-color: orange;
+    padding: 1rem;
 }

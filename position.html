@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        .container {
+            background-color: lightgray;
+            width: 200px;
+            height: 150px;
+            margin: 75px;
+        }
+
+        .square {
+            width: 50px;
+            height: 50px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute
+        }
+
+        .fixed {
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Position di base: tutti static -->
+    <div class="container">
+        <div class="square red"></div>
+        <div class="square green"></div>
+        <div class="square blue"></div>
+    </div>
+
+    <!-- Position con relative -->
+    <div class="container">
+        <div class="square relative red" style="left: 100%;"></div>
+        <div class="square relative green" style="left: 100px; top: 50px;"></div>
+        <div class="square relative yellow" style="left: 50%; top: 50px; transform: translateX(-50%)"></div>
+        <!-- oppure margin-left:-25px se conosciamo le dimensioni del quadrato -->
+        <div class="square blue"></div> <!-- style="top: -50px;"-->
+    </div>
+
+    <!-- Position absolute senza container-->
+    <div class="container">
+        <div class="square red"></div>
+        <div class="square green absolute" style="right: 0px;"></div>
+        <div class="square blue"></div>
+    </div>
+
+    <!-- Position absolute con container-->
+    <div class="container relative">
+        <div class="square red"></div>
+        <div class="square green absolute" style="right: 0px;"></div>
+        <div class="square blue"></div>
+    </div>
+
+    <!-- Position fixed -->
+    <div class="container">
+        <div class="square red"></div>
+        <div class="square green fixed" style="bottom: 0; right: 100px;"></div>
+        <div class="square blue"></div>
+    </div>
+
+</body>
+
+</html>
