@@ -79,10 +79,16 @@ a {
 /************* HEADER **************/
 header {
     background-color: #255ee9;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
 }
 
 header>nav {
     padding: 1rem 0;
+    /* in questo caso imposto la height manualmente, solo per poter dare il giusto padding al main */
+    height: 6rem;
 }
 
 .nav-column {
@@ -153,6 +159,11 @@ p {
 }
 
 /************* MAIN **************/
+main {
+    /* v. dichiarazione di header e nav */
+    padding-top: 6rem;
+}
+
 section.dark {
     background-color: lightgray;
 }
